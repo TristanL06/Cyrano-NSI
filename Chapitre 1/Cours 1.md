@@ -201,6 +201,10 @@ On peut accéder à une valeur en pointant la clé :
 >>> D["clef 1"]
 "valeur 1"
 ```
-
-
-# Opérations et méthodes
+Pour modifier une valeur associée à une clé il suffit de la réassigner comme ceci :
+```python
+>>> D["clef 1"] = "valeur a"
+>>> D
+{"clef 1":"valeur a", "clef 2":"valeur 2"}
+```
+On peut récupérer toutes les clefs d'un dictionnaire avec la méthode `D.keys()`
