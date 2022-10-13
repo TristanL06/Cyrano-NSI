@@ -82,10 +82,10 @@ Si on suit l'indentation on voit clairement une phase de descente des appels ré
 On peut également représenter ces étapes sous forme de tableau :
 |  0  |  1  |  2  |  3  |  4  |  5  |  6  |
 | --: | --: | --: | --: | --: | --: | --: |
-|     |     |     | ==1== 0 |     |     |     |
-|     |     |   1 |   1 | ==2== 1 |     |     |
-|     |   2 |   2 |   2 |   2 | ==4== 2 |     |
-|   3 |   3 |   3 |   3 |   3 |   3 | ==8== 3 |
+|     |     |     | **1** 0 |     |     |     |
+|     |     |   1 |   1 | **2** 1 |     |     |
+|     |   2 |   2 |   2 |   2 | **4** 2 |     |
+|   3 |   3 |   3 |   3 |   3 |   3 | **8** 3 |
 
 ==Toute notion de fonction terminale et non terminale est hors programme==
 ==\*\* Début du hors programme \*\*==
@@ -110,7 +110,7 @@ On voit bien qu'il n'y a pas de phase de remontée des appels récurcifs. Pareil
 |  0  |  1  |  2  |  3  |
 | --: | --: | --: | --: |
 |     |     |     | ==8== 0 |
-|     |     | ==4== 1 |   1 |
-|     | ==2== 2 |   2 |   2 |
-| ==1== 3 |   3 |   3 |   3 |
+|     |     | **4** 1 |   1 |
+|     | **2** 2 |   2 |   2 |
+| **1** 3 |   3 |   3 |   3 |
 ==\*\* fin du hors programme \*\*==
