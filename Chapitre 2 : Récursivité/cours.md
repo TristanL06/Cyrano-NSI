@@ -77,7 +77,7 @@ appel de puissance(2,3)
 		retour de 4
 	retour de 8
 ```
-Si on suit l'indentation on voit clairement une phase de descente des appels récursifs (tous les appels en cascade) et une phase de remontée (tous les retour). Cela est dû au fait que l'on effectue un calcul sur l'appel de la fonction : **x \* ****** puissance(x, n-1).
+Si on suit l'indentation on voit clairement une phase de descente des appels récursifs (tous les appels en cascade) et une phase de remontée (tous les retour). Cela est dû au fait que l'on effectue un calcul sur l'appel de la fonction : __x\*__ puissance(x, n-1).
 
 On peut également représenter ces étapes sous forme de tableau :
 |  0  |  1  |  2  |  3  |  4  |  5  |  6  |
