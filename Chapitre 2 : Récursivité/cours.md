@@ -98,7 +98,7 @@ Pour la rendre **terminale**, la condition d'arrêt doit renvoyer le résultat f
 def puissance(x, n, résultat = 1):
 	if n == 0:
 		return résultat
-	return puissance(x, n-1, x \* résultat)
+	return puissance(x, n-1, x * résultat)
 ```
 
 Avec cette fonction récursive **terminale** on n'a plus de calcul sur l'appel récursif et la liste des appels ressemble à ça :
