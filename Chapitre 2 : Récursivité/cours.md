@@ -87,8 +87,8 @@ On peut également représenter ces étapes sous forme de tableau :
 |     |   2 |   2 |   2 |   2 | **4** 2 |     |
 |   3 |   3 |   3 |   3 |   3 |   3 | **8** 3 |
 
-==Toute notion de fonction terminale et non terminale est hors programme==
-==\*\* Début du hors programme \*\*==
+**Toute notion de fonction terminale et non terminale est hors programme**
+\*\* Début du hors programme \*\*
 La présence de cette phase de remontée fait que la fonction est **non terminale**.
 Pour la rendre **terminale**, la condition d'arrêt doit renvoyer le résultat final. Il faut donc ajouter un argument comme suit :
 ```python
@@ -109,8 +109,9 @@ appel de puissance(2,3)
 On voit bien qu'il n'y a pas de phase de remontée des appels récurcifs. Pareil avec le tableau :
 |  0  |  1  |  2  |  3  |
 | --: | --: | --: | --: |
-|     |     |     | ==8== 0 |
+|     |     |     | **8** 0 |
 |     |     | **4** 1 |   1 |
 |     | **2** 2 |   2 |   2 |
 | **1** 3 |   3 |   3 |   3 |
-==\*\* fin du hors programme \*\*==
+
+\*\* fin du hors programme \*\*
