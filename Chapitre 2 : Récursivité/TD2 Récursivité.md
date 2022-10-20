@@ -49,3 +49,25 @@ On suppose que cette dernière règle est également respectée dans la configur
 
 > Énoncé original des tours de Hanoï :
 > *N. Claus de Siam a vu, dans ses voyages pour la publication des écrits de l'illustre Fer-Fer-Tam-Tam, dans le grand temple de Bénarès, au-dessous du dôme qui marque le centre du monde, trois aiguilles de diamant, plantées dans une dalle d'airain, hautes d'une coudée et grosses comme le corps d'une abeille. Sur une de ces aiguilles, Dieu enfila au commencement des siècles, 64 disques d'or pur, le plus large reposant sur l'airain, et les autres, de plus en plus étroits, superposés jusqu'au sommet. C'est la tour sacrée du Brahmâ. Nuit et jour, les prêtres se succèdent sur les marches de l'autel, occupés à transporter la tour de la première aiguille sur la troisième, sans s'écarter des règles fixes que nous venons d'indiquer, et qui ont été imposées par Brahmâ. Quand tout sera fini, la tour et les brahmes tomberont, et ce sera la fin des mondes !*
+
+
+## Recherche récursive dans un répertoire
+
+La récursivité est très utilisée pour fouiller dans des dossiers. Pour cela on peut utiliser la bibliothèque `os` en python. On commence donc par l'importer avec la ligne `import os`.
+
+Voici quelques fonctions utiles :
+```txt
+abspath(path)             →   Retourne un chemin absolu
+dirname(p)                →   Retourne le dossier parent de l'élément
+exists(path)              →   Test si un chemin existe
+getaTime(filename)        →   Retourne la date du dernier accès au fichier
+getmTime(filename)        →   Retourne la date de la dernière modification du fichier
+isdir(s)                  →   Test si le chemin est un dossier
+isfile(path)              →   Test si le chemin est un fichier
+```
+
+Créez un "virus" qui parcourera tous les fichiers d'un répertoire et créer des stats, par exemple :
+- Pourcentage de fichiers texte
+- taille totale de tous les fichiers
+- nombre de fichiers et dictionnaires
+- arborescence (tree)
