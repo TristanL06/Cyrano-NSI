@@ -21,7 +21,9 @@ ___
 #### Exercice 3 : Tri Fusion
 
 Le tri fusion fonctionne en utilisant le *slicing* (en coupant une liste en deux) jusqu'à n'avoir plus qu'un seul élément avant de recombiner les éléments dans le bon ordre.
+
 ![Tri Fusion](https://upload.wikimedia.org/wikipedia/commons/6/60/Mergesort_algorithm_diagram.png)
+
 C'est une méthode de tri récursif.
 
 Écrivez la fonction récursive du tri fusion.
