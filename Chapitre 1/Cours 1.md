@@ -7,7 +7,7 @@ Sous Spyder (de même que sur la plupart des IDE) il y a deux éléments primord
 ![Interface Spyder](https://assets.lls.fr/pages/35776949/capture-d-cran-2020-10-29-095757.png)
 
 Pour tester simplement une commande on peut utiliser l'interpréteur, pas besoin d'utiliser la fonction `print` pour avoir un retour du résultat.
-> C'est pratique pratique pour tester les fonctions mais totalement inadapté pour un code complet
+> C'est pratique pour tester les fonctions mais totalement inadapté pour un code complet
 
 C'est pour ça que l'on va écrire dans l'éditeur de texte. On va pouvoir y mettre un programme complet et l'*exécuter* en appuyant sur le triangle vert (ou `f5`). Le résultat sera affiché dans l'interpréteur.
 > :warning: Si la fonction *print()* n'est pas utilisée le programme va bien s'exécuter mais ne va rien renvoyer
