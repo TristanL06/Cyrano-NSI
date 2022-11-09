@@ -10,7 +10,7 @@ Pour tester simplement une commande on peut utiliser l'interpréteur, pas besoin
 > C'est pratique pratique pour tester les fonctions mais totalement inadapté pour un code complet
 
 C'est pour ça que l'on va écrire dans l'éditeur de texte. On va pouvoir y mettre un programme complet et l'*exécuter* en appuyant sur le triangle vert (ou `f5`). Le résultat sera affiché dans l'interpréteur.
-> :warning: Si la foction *print()* n'est pas utilisée le programme va bien s'exécuter mais ne va rien renvoyer
+> :warning: Si la fonction *print()* n'est pas utilisée le programme va bien s'exécuter mais ne va rien renvoyer
 
 ___
 ## Constantes et variables
