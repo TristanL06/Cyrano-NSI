@@ -221,7 +221,7 @@ Les tests permettent de comparer deux valeurs de même type. Un test renverra to
 | :-------: | :---: | :-: | :-------: | :---: | - |
 | = | == | 20 == 3 | False | bool | Est-ce que 20 = 3 ? |
 | $\neq$ | != | 20 != 3 | True | bool | Est-ce que 20 $\neq$ 3 ? |
-| < | == | 20 < 3 | False | bool | Est-ce que 20 < 3 ? |
+| < | < | 20 < 3 | False | bool | Est-ce que 20 < 3 ? |
 | $\leqslant$ | <= | 20 <= 3 | False | bool | Est-ce que 20 $\leqslant$ 3 ? |
 | > | > | 20 > 3 | True | bool | Est-ce que 20 > 3 ? |
 | $\geqslant$ | >= | 20 >= 3 | True | bool | Est-ce que 20 $\geqslant$ 3 ? |
