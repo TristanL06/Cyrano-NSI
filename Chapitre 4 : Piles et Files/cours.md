@@ -14,19 +14,19 @@ Concernant les Piles on peut donc définir quatre opérations :
 - Ajouter un élément sur la pile
 
 Imaginon que l'on a la pile suivante :  
-┌────┐
-│   5  │
-├────┤
-│   4  │
-├────┤
-│   8  │
-├────┤
-│   6   |
-├────┤
-│   3  │
-├────┤
-│   2  │
-└────┘  
+┌───┐  
+│ 5 │  
+├───┤  
+│ 4 │  
+├───┤  
+│ 8 │  
+├───┤  
+│ 6 |  
+├───┤  
+│ 3 │  
+├───┤  
+│ 2 │  
+└───┘  
 
 Voici successivement un dépilement, puis un empilement de la valeur 8
 ```txt
