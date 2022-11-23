@@ -1,9 +1,9 @@
 # Programmation Orientée Object (POO)
 
-La **Programmation Orientée Object** permet de créer un outil qui aura des **attributs** (variables) et des **méthodes** (foctions).  
+La **Programmation Orientée Objet** permet de créer un outil qui aura des **attributs** (variables) et des **méthodes** (foctions).  
 Ce **paradigme** a pour avantages de pouvoir regrouper dans une seule entité les données et fonctions utiles et de cacher les détails de l'exécution à l'utilisateur, ce qui permet l'**encapsulation**.
 
-Comme la plupart des langages, Python utilise le concept de **classe**. Une classe est tout simplement une définition d'un object, un moule qui va permettre de construire les objets que l'on va utiliser.  
+Comme la plupart des langages, Python utilise le concept de **classe**. Une classe est tout simplement une définition d'un objet, un moule qui va permettre de construire les objets que l'on va utiliser.  
 Pour écrire une Classe en Python il suffit d'utiliser le mot-clé `class` et de définir un `__init__` :
 ```python
 class Cercle:
@@ -14,8 +14,8 @@ class Cercle:
 Ici on définit une classe Cercle qui définit un cercle dans le plan avec les coordonnées x et y de son centre, ainsi que son rayon. 
 > Le premier paramètre de la méthode \_\_init\_\_ est nommé 'self' par convention, cela représente l'objet utilisé.
 
-La syntaxe `self.rayon = r` permet de créer un nouvel attribut `rayon` pour l'object `self` et de lui donner pour valeur initiale la valeur du paramètre `r`.  
-Voici l'utilisation que l'on peut faire de cet object actuellement :
+La syntaxe `self.rayon = r` permet de créer un nouvel attribut `rayon` pour l'objet `self` et de lui donner pour valeur initiale la valeur du paramètre `r`.  
+Voici l'utilisation que l'on peut faire de cet objet actuellement :
 ```python
 >>> c = Cercle(0,1,5)
 >>> c.centre
@@ -37,7 +37,7 @@ class Cercle:
         self.rayon = r
         self.circonférence = 2*pi*r
 ```
-Et demander la circonférence de l'object c1 créé :
+Et demander la circonférence de l'objet c1 créé :
 ```python
 >>> c1 = Cercle(0,0,1)
 >>> c1.circonférence
@@ -45,8 +45,8 @@ Et demander la circonférence de l'object c1 créé :
 ```
 
 #### Les méthodes
-Les **méthodes** sont des **fonctions internes** aux objects permettant d'exécuter du code uniquement lorsque c'est nécessaire, pour ne pas tout exécuter lors de la création de l'object (dans le `__init__`).  
-Dans notre exemple du cercle on peut imaginer une méthode `distance` qui prend en argument un autre object *Cercle* et qui renvoie le flottant de la distance entre les centres des cercles :
+Les **méthodes** sont des **fonctions internes** aux objets permettant d'exécuter du code uniquement lorsque c'est nécessaire, pour ne pas tout exécuter lors de la création de l'objet (dans le `__init__`).  
+Dans notre exemple du cercle on peut imaginer une méthode `distance` qui prend en argument un autre objet *Cercle* et qui renvoie le flottant de la distance entre les centres des cercles :
 ```python
 from math import pi
 
@@ -94,7 +94,7 @@ c2 = Cercle(-2,1,1)
 c3 = Cercle(2,3,3)
 c4 = Cercle(2,3,2)
 ```
-*on a 4 **objects** créés à partir de la classe Cercle, qui ont chacun des attribus différents mais avec lesquels on peut intéragir de manière standardisée.*
+*on a 4 **objets** créés à partir de la classe Cercle, qui ont chacun des attribus différents mais avec lesquels on peut intéragir de manière standardisée.*
 ![quatre cercles](https://raw.githubusercontent.com/TristanL06/Cyrano-NSI/main/Chapitre%203%20%3A%20POO/ressources/image.png)
 
 Dans la console on peut donc exécuter :
