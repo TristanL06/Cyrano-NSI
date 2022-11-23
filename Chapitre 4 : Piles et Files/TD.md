@@ -30,7 +30,7 @@ Pour tout le TD les piles et les files ne doivent pas être modifiées lors de l
 
 On a deux files représentant deux routes se rencontrant à un croisement. La route 2 a un *céder-le-passage* donc si dex voitures arrivent en même temps en bout de file c'est la voiture 1 qui passe.
 La file 3 représente la route 3, route de sortie :  
-![croisement]("Pasted image 20221123221232.png")
+![croisement](Pasted image 20221123221232.png)
 
 - Écrire l'algorithme prenent en entrée les deux files et retournant la liste de sortie respectant les règles.
 
