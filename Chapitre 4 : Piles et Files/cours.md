@@ -4,7 +4,7 @@ Les **piles** et les **files** sont des types n'existant pas formellement en Pyt
 
 ## Les PILES 
 Les piles sont des objets FILO (First In Last Out), c'est-à-dire que les valeurs entrées en premier ne peuvent être récupérées que en dernier. Exactement comme une pile de crêpes, la première crêpe cuite sera mangée en dernier.  
-La représentation la plus courante est celle d'une pile de dossiers. Pour accéder à celui qui est en dessous on doit enlever ceux d'au dessus un par un.
+La représentation la plus courante est celle d'une pile de dossiers. Pour accéder à celui qui est en dessous on doit enlever ceux d'au dessus un par un.  
 ![pile](https://pixy.org/src/452/thumbs350/4522322.jpg)
 
 Concernant les Piles on peut donc définir quatre opérations :
