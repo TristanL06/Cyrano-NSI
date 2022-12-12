@@ -23,6 +23,7 @@ Les valeurs associées aux clés "type", "etat", "station" de dict_velo sont de 
 
 Dans le cas où le vélo est en déplacement ou en panne, "station" correspond à celle où il a été dernièrement stationné.  
 Voici un extrait de la table de données :
+
 ```txt
 flotte = {
    12 : {"type" : "electrique", "etat" : 1, "station" : "Jean Médecin"},
@@ -37,6 +38,7 @@ flotte = {
    22 : {"type" : "electrique", "etat" : -1, "station" : "Ferber"}
 }
 ```
+
 `flotte` étant une variable globale du programme.
 
 Toutes les questions de cet exercice se réfèrent à l'extrait de la table `flotte` fourni ci-dessus. **L'annexe 1 présente** un rappel sur les dictionnaires en langage Python.
