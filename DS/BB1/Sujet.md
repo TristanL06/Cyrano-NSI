@@ -125,6 +125,7 @@ L’objectif de cet exercice est de déterminer la somme maximale pour tous les 
 | 4 | 1 | 1 | 3 |
 | 2 | 0 | 2 | 1 |
 | 3 | 1 | 5 | 1 |
+
 T' = 
 
 |   |   |   |   |
