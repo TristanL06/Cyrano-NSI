@@ -68,14 +68,14 @@ def proposition(choix):
 		   'nom de la station' : (latitude, longitude)
 
 ```json
-	stations = {
-		'Jean Médecin' : (43.7017016, 7.2673351),
-		'Les Eucalytpus' : (43.6756068, 7.2206844),
-		'Ferber' : (43.6769012, 7.2283563),
-		'CADAM' : (43.6767791, 7.1991651),
-		
-		}
-		```
+stations = {
+	'Jean Médecin' : (43.7017016, 7.2673351),
+	'Les Eucalytpus' : (43.6756068, 7.2206844),
+	'Ferber' : (43.6769012, 7.2283563),
+	'CADAM' : (43.6767791, 7.1991651),
+	
+	}
+```
 
 On **admet** que l'on dispose d'une fonction `distance(p1, p2)` permettant de renvoyer la distance en mètres entre deux positions données par leurs coordonnées GPS (latitude et longitude).  
 Cette fonction prend en paramètre deux tuples représentant les coordonnées des deux positions GPS et renvoie un nombre entier représentant cette distance en mètres.
