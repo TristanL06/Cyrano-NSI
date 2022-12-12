@@ -67,7 +67,7 @@ def proposition(choix):
    Chaque élément du dictionnaire est du type :  
 		   'nom de la station' : (latitude, longitude)
 
-```json
+```txt
 stations = {
 	'Jean Médecin' : (43.7017016, 7.2673351),
 	'Les Eucalytpus' : (43.6756068, 7.2206844),
@@ -98,6 +98,7 @@ Les lignes sont numérotées de 0 à n − 1 et les colonnes sont numérotées d
 On appelle chemin une succession de cases allant de la case (0, 0) à la case (n − 1, p − 1), en n’autorisant que des déplacements case par case : soit vers la droite, soit vers le bas.  
 On appelle somme d’un chemin la somme des entiers situés sur ce chemin.  
 Par exemple, pour le tableau T suivant :
+
 |   |   |   |   |
 | - | - | - | - |
 | **4** | **1** | **1** | 3 |
@@ -118,12 +119,14 @@ L’objectif de cet exercice est de déterminer la somme maximale pour tous les 
   
 **Question 3** On veut créer le tableau T’ où chaque élément T’\[i]\[j] est la somme maximale pour tous les chemins possibles allant de (0, 0) à (*i*, *j*).
 1. Compléter et recopier sur votre copie le tableau T' donné ci dessous associé au tableau T :
+
 |   |   |   |   |
 | - | - | - | - |
 | 4 | 1 | 1 | 3 |
 | 2 | 0 | 2 | 1 |
 | 3 | 1 | 5 | 1 |
 T' = 
+
 |   |   |   |   |
 |:-:|:-:|:-:|:-:|
 | 4 | 5 | 6 | ? |
