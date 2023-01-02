@@ -2,7 +2,7 @@
 
 Les arbres ont de très nombreuses applications, y compris en mathématiques, dans l'industrie ou dans tous les systèmes d'organisation de fichiers.
 
-![arbre](https://mermaid.ink/img/pako:eNpN0U1vhCAQBuC_YubEJprsbnvyVlf349BTe2q4TBRXExWD0KYx_veOChROPJkXGGCGUlYCUngqHJvoM-dDROONsePxcNiRMXbyuBBODjnh7FAwdvaxK8HHbgQfuxNeHB6EVwd7dJQkSZSFuISwHWYbihBX29SGW4h7iAfE0AvVY1vRvee1xEE3ohccUppWokbTaQ7xXqo7-VM2qPRanm2rUBr1bRdkOLUTh7Wy8GGh7c1YoRZF1WqpIK2xm0QMaLT8-B1KSLUywoXyFunpe58acfiS8t9i2-R9_6Ttr5Y_zwpyzA?type=png)
+![arbre](https://mermaid.ink/img/pako:eNpN0U1vhCAQBuC_YubEJprsbnvyVlf349BTe2q4TBRXExWD0KYx_veOChROPJkXGGCGUlYCUngqHJvoM-dDROONsePxcNiRMXbyuBBODjnh7FAwdvaxK8HHbgQfuxNeHB6EVwd7dJQkSZSFuISwHWYbihBX29SGW4h7iAfE0AvVY1vRvee1xEE3ohccUppWokbTaQ7xXqo7-VM2qPRanm2rUBr1bRdkOLUTh7Wy8GGh7c1YoRZF1WqpIK2xm0QMaLT8-B1KSLUywoXyFunpe58acfiS8t9i2-R9_6Ttr5Y_zwpyzA?type=png)  
 *Ici on peut voir un arbre contenant 9 noeuds.*
 
 les arbres **binaires** sont un exemple particulier d'arbre. Comme l'indique leur nom les arbres binaires ont au plus deux fils à chaque noeud. Et chaque noeud a exactement un père (sauf le noeud racine). Ils sont également orientés, l'ordre gauche/droite des fils est donc important.
