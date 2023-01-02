@@ -35,7 +35,7 @@ Il y a 4 manières de parcourir un arbre binaire :
 - Parcours en profondeur **infixe**
 - Parcours en profondeur **postfix**
 
-Dans la suite nous allons utiliser cet arbre comme exemple :
+Dans la suite nous allons utiliser cet arbre comme exemple :  
 ![arbre démo](https://mermaid.ink/img/pako:eNpNkUFrhDAQhf9KmLKQBYXVrV3wVld3Tz21p5JL0KTKRiMxbinif2_M2K455X3z5mXCTFDqSkAKX4b3NfnIWUfceaX0cNjvyW4XIcgojRDECM4OxB4cEeSUxuh4RlA4EHmQILg4gC0vCK4OHD04IVgfJ2EYkmwrzusUXuRbUazjeHHZiusjs1R8GHIhib4R2SiVPiUygQBaYVreVO7702JjYGvRCgapu1ZC8lFZBgGWpNLfZc2NXcrTmg3laO5rQ8aHZmCwVGbWzS5-7CtuRVE1VhtIJVeDCICPVr__dCWk1oziz5Q33G2g_Xf1vPvU-qGFD3nDXfmVzb8DYnYa?type=png)
 
 
@@ -47,19 +47,19 @@ l'arbre est parcourus étage par étage, la racine d'abord, puis les fils de la 
 On obtient donc \[00, 10, 12, 20, 21, 22, 23\] lors que l'on parcours de cet arbre **en largeur d'abord**
 
 ### Le parcours Préfixe
-L'arbre est parcourus selon l'ordre *noeud*, *fils gauche*, *fils droit*
+L'arbre est parcourus selon l'ordre *noeud*, *fils gauche*, *fils droit*  
 ![arbre prefixe](https://raw.githubusercontent.com/TristanL06/Cyrano-NSI/main/Chapitre%205%20%3A%20Arbres%20binaires/ressources/préfix.gif)
 
 On obtient donc \[00, 10, 20, 21, 12, 22, 23\] lors que l'on parcours de cet arbre de manière **préfixe**
 
 ### Le parcours Infixe
-L'arbre est parcourus selon l'ordre *fils gauche*, *noeud*, *fils droit*
+L'arbre est parcourus selon l'ordre *fils gauche*, *noeud*, *fils droit*  
 ![arbre prefixe](https://raw.githubusercontent.com/TristanL06/Cyrano-NSI/main/Chapitre%205%20%3A%20Arbres%20binaires/ressources/infixe.gif)
 
 On obtient donc \[20, 10, 21, 00, 22, 12, 23\] lors que l'on parcours de cet arbre de manière **infixe**
 
 ### Le parcours Postfixe
-L'arbre est parcourus selon l'ordre *fils gauche*, *fils droit*, *noeud*
+L'arbre est parcourus selon l'ordre *fils gauche*, *fils droit*, *noeud*  
 ![arbre prefixe](https://raw.githubusercontent.com/TristanL06/Cyrano-NSI/main/Chapitre%205%20%3A%20Arbres%20binaires/ressources/postfix.gif)
 
 On obtient donc \[20, 21, 10, 22, 23, 12, 00\] lors que l'on parcours de cet arbre de manière **postfixe**
