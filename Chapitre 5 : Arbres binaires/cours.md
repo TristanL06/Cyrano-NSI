@@ -64,6 +64,10 @@ L'arbre est parcourus selon l'ordre *fils gauche*, *fils droit*, *noeud*
 
 On obtient donc \[20, 21, 10, 22, 23, 12, 00\] lors que l'on parcours de cet arbre de manière **postfixe**
 
+
+Résumé des méthodes de parcours des arbres :
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Sorted_binary_tree_ALL.svg/562px-Sorted_binary_tree_ALL.svg.png)
+
 ## Cas Particuliers des arbres
 
 ### Les tas
