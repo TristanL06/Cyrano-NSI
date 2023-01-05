@@ -2,7 +2,7 @@
 
 ## Exercice 1 :
 Donner toutes les caractéristiques des arbres suivants, ainsi que les résultats des différentes méthodes de parcours lorsque cela est possible :  
-1. 
+1.  
  ![](https://mermaid.ink/img/pako:eNpNkctuwyAQRX8FTRVpItmbVNl4Vz_SbPqQmk0rNiMbYlRsLMCtKsv_Xr9ow-pc7swFhgFKUwlI4Gqpq9kl5y2b1gPiZb9fOUV8D5whvgTOEV8DF4jnwCfE58C73SPi4T7ILZzFcczSW5FtRy1iu0O2iOJWnP5jSk3O5UIy88mk0jq5O8ojRNAI25CqphcNcxkHX4tGcEgmrISkXnsO0WpJbb7Lmqyf7WHLhrK3X1tDSk45DrMz8nac4vuuIi-KSnljIZGknYiAem_eftoSEm97EYpyRdNQm7DZUfthTPPXJJaMp3X6yyeMvyqWbsI?type=png)
 
 2. 
