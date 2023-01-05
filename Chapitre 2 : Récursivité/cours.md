@@ -1,6 +1,6 @@
 # Récursivité
 ## Introduction
-Avant d'aborder la récursivité il est primordial de bien différencier un fonction, une procédure et des instructions.
+Avant d'aborder la récursivité il est primordial de bien différencier une fonction, une procédure et des instructions.
 
 ### Des instructions
 C'est une suite de commandes, tapées dans l'invite de commande ou écrites à la suite dans l'éditeur de texte. Elles constituent la colonne vertébrale du programme et ne sont exécutées que suivant l'ordre d'écriture.
