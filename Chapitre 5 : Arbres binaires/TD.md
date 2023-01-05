@@ -19,8 +19,8 @@ Donner toutes les caractéristiques des arbres suivants, ainsi que les résultat
 
 On implémente les arbres binaires non vides par des tuples de trois éléments : `(valeur,(fils gauche),(fils droit)]`. Écrivez les fonctions suivantes en  Python :
 1. `est_vide(arbre)` qui retourne `True` si l'arbre est vide, `False` sinon
-2. `fils_gauche(arbre)` qui retourne le fils gauche de **a** si a est non vide, `None` sinon.
-3. `fils_gauche(arbre)` qui retourne le fils gauche de **a** si a est non vide, `None` sinon.
+2. `fils_gauche(arbre)` qui retourne le fils gauche de l'arbre s'il est non vide, `None` sinon.
+3. `fils_gauche(arbre)` qui retourne le fils gauche de l'arbre si'il est non vide, `None` sinon.
 4. `afficher(arbre, mode)` qui affiche les valeurs de l'arbre selon le mode précisé (`profondeur`, `préfixe`, `infixe`, `postfixe`).
 5. `recherche_iter(valeur, arbre)` qui retourne si la valeur est présente dans l'arbre, de manière itérative.
 6. `recherche_rec(valeur, arbre)` qui fait la même chose que `recherche_iter`, mais de manière récursive.
