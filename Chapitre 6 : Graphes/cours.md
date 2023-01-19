@@ -2,7 +2,7 @@
 
 Les graphes sont un autre outil de modélisation mathématique utilisé pour représenter des relations entre des objets. Ils ont de nombreuses applications, notamment en informatique, en réseaux, en transport et en sciences sociales.
 
-[![GOT personnages](https://www.kaggle.com/code/mmmarchetti/game-of-thrones-network-analysis)]  *Ici on peut voir un graph représentant des relations entre des personnes.*
+![GOT personnages](https://www.kaggle.com/code/mmmarchetti/game-of-thrones-network-analysis)  *Ici on peut voir un graph représentant des relations entre des personnes.*
 
 [![Twitch relations](https://pbs.twimg.com/media/E29MElYXEAMjCFa?format=jpg&name=large)](https://www.youtube.com/watch?v=N61_kHXpaFA)  instantané de Twitch [*zoomer dedans*](https://www.easyzoom.com/imageaccess/6ef899188b964819a95a286fcb422635)
 
