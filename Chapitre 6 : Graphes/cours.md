@@ -2,7 +2,7 @@
 
 Les graphes sont un autre outil de modélisation mathématique utilisé pour représenter des relations entre des objets. Ils ont de nombreuses applications, notamment en informatique, en réseaux, en transport et en sciences sociales.
 
-![GOT personnages](https://www.kaggle.com/code/mmmarchetti/game-of-thrones-network-analysis)  *Ici on peut voir un graph représentant des relations entre des personnes.*
+[![GOT personnages](https://assets.datacamp.com/production/project_76/img/got_network.jpeg)](https://www.kaggle.com/code/mmmarchetti/game-of-thrones-network-analysis)  *Ici on peut voir un graph représentant des relations entre des personnes.*
 
 [![Twitch relations](https://pbs.twimg.com/media/E29MElYXEAMjCFa?format=jpg&name=large)](https://www.youtube.com/watch?v=N61_kHXpaFA)  instantané de Twitch [*zoomer dedans*](https://www.easyzoom.com/imageaccess/6ef899188b964819a95a286fcb422635)
 
@@ -119,10 +119,41 @@ Et on répète cette étape jusqu'à avoir barré toutes les colonnes sauf une
 | \| | \|    |       | 2 - 1 |       |       |
 | \| | \|    | \|    |       | 7 - 2 | 8 - 2 |
 
-En partant de 3, les 
+En partant de 3, les sommets adjacents sont 5 et 4, à une distance de 4 et 6, que l'on ajoute donc à 2 et on garde le minimum de chaque :  
+| 0  | 1     | 2     | 3     | 4     | 5     |
+|:---:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| 0  | 1 - 0 | 1 - 0 |       |       |       |
+| \| | \|    |       | 2 - 1 |       |       |
+| \| | \|    | \|    |       | 6 - 2 | 8 - 2 |
+| \| | \|    | \|    |   \|    |  | 7 - 3 |
+
+Les sommets adjacents à 4 sont déjà complets, on trace donc le trait dans la colonne 4 :  
+| 0  | 1     | 2     | 3     | 4     | 5     |
+|:---:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| 0  | 1 - 0 | 1 - 0 |       |       |       |
+| \| | \|    |       | 2 - 1 |       |       |
+| \| | \|    | \|    |       | 6 - 2 | 8 - 2 |
+| \| | \|    | \|    |   \|    |  | 7 - 3 |
+| \| | \|    | \|    |   \|    | \| |  |
+
+Et enfin le dernier sommet n'a aucun adjacent non complet, on trace un trait dans la colonne 5 et on a terminé :  
+| 0  | 1     | 2     | 3     | 4     | 5     |
+|:---:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| 0  | 1 - 0 | 1 - 0 |       |       |       |
+| \| | \|    |       | 2 - 1 |       |       |
+| \| | \|    | \|    |       | 6 - 2 | 8 - 2 |
+| \| | \|    | \|    |   \|    |  | 7 - 3 |
+| \| | \|    | \|    |   \|    | \| |  |
+| \| | \|    | \|    |   \|    | \| | \| |
+
+> Pour lire ce tableau il faut regarder la dernière ligne contenant des chiffres de chaque colonne. Par exemple ici `2 - 1` signifie que le plus court chemin pour atteindre le sommet 3 a un coût de 2 et passe par le sommet 1.  
+> Si on regarde le sommet 1, `1 - 0` signifie que l'atteindre a un coût de 1 en passant par 0.  
+> En remontant donc la chaîne, le chemin le plus court entre 0 et 3 est la chaîne `0 - 1 - 3`.
+
+Cet algorithme donne les meilleurs chemins pour aller de l'origine à tous les sommets du graphe, il est cependant assez coûteux en ressources car il test de très nombreuses possibilités et devient lent quand le graphe devient grand. Pour le fonctionnement réel des GPS il lui est préféré des algorithmes plus efficaces (A*) qui ne donnent cependant pas toujours le meilleur trajet.
 
 
-Il existe également les algorithmes suivants :
+Il existe également les algorithmes suivants, qui sont plus compliqués et totalement hors-programme :
 - Algorithme de Bellman-Ford pour détecter les cycles négatifs
 - Algorithme de Kruskal pour trouver l'arbre couvrant de poids minimum
 - Algorithme de Prim pour trouver l'arbre couvrant de poids minimum
