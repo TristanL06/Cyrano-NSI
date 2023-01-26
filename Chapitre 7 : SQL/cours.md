@@ -1,7 +1,7 @@
 # Chapitre 7 : Bases de données et SQL
 
 Pour stocker des données la plupart du temps le format le plus optimisé est le *json*, en organisant les données sous forme de dictionnaires :
-```json
+```txt
 {0:{"nom":"Dubois", "adresse":"6 rue du port", "numéro":"06 60 06 60 06"},
  1:{"nom":"Martin", "adresse":"47 avenue des champs", "numéro":"07 69 42 24 96"},
  2:{"nom":"Cresson", "adresse":"57 rue de vienne", "numéro":"06 19 91 19 92"}}
@@ -20,6 +20,7 @@ Une table est une collection de données organisées sous forme de **lignes** (e
 |  0 |  Dubois |     6 rue du port    | 06 60 06 60 06 |
 |  1 |  Martin | 47 avenue des champs | 07 69 42 24 96 |
 |  2 | Cresson |   57 rue de vienne   | 06 19 91 19 92 |
+
 *ici la table contient 3 enregistrements, on dit qu'elle est de cardinal 3*  
 
 SQL permet de réaliser différentes opérations sur les tables d'une base de données, comme :
@@ -72,6 +73,7 @@ Maintenant si on veut également stocker la valeur de chaque Stock on peut ajout
 | 104 | 97 | 21 | 18 |
 | 122 | 97 | 47 | 18 |
 | 104 | 54 | 57 | 6  |  
+
 Et là on remarque que la valeur du Stock 97 va être stockée 2 fois. Et plus largement un stock a une valeur unique, il n'y a donc aucun intérêt de le stocker à chaque client. Il devient donc intéressant de combiner plusieurs tables.
 
 ___
