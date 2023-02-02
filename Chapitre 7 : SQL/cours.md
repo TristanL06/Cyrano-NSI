@@ -1,7 +1,7 @@
 # Chapitre 7 : Bases de données et SQL
 
 Pour stocker des données la plupart du temps le format le plus optimisé est le *json*, en organisant les données sous forme de dictionnaires :
-```txt
+```json
 {0:{"nom":"Dubois", "adresse":"6 rue du port", "numéro":"06 60 06 60 06"},
  1:{"nom":"Martin", "adresse":"47 avenue des champs", "numéro":"07 69 42 24 96"},
  2:{"nom":"Cresson", "adresse":"57 rue de vienne", "numéro":"06 19 91 19 92"}}
@@ -40,25 +40,25 @@ On va maintenant créer une table de gestion d'actifs financiers.
 
 On doit donc avoir une table avec des `idClient`, des `idStocks` et des `quantité` de stocks détenus. On considère que le tuple (idClient, idStock) est unique et constitue donc une clé.
 
-**comptes**
+**comptes**  
 | idClient |   idStock   | quantité   |
 |:--:|:-------:|:--------------------:|
 | 104 | 97 | 21 |
 | 122 | 97 | 47 |
 | 104 | 54 | 57 |
 
-Pour obtenir toutes les données on peut faire la commande
+Pour obtenir toutes les données on peut faire la commande  
 ```SQL
 SELECT * FROM comptes
 ```
 
-Pour avoir les Stocks et quantités concernant le client 104 on peut faire
+Pour avoir les Stocks et quantités concernant le client 104 on peut faire  
 ```SQL
 SELECT idStock, quantité FROM comptes
 WHERE idClient = 104
 ```
 
-Si on veut ordonner la réponse par ordre décroissant des quantités :
+Si on veut ordonner la réponse par ordre décroissant des quantités :  
 ```SQL
 SELECT idStock, quantité FROM comptes
 WHERE idClient = 104
@@ -67,7 +67,7 @@ ORDER BY quantité DESC
 
 Maintenant si on veut également stocker la valeur de chaque Stock on peut ajouter un attribut à la table :  
 
-**comptes**
+**comptes**  
 | idClient |   idStock   | quantité   | valeurStock |
 |:--:|:-------:|:--------------------:| :-: |
 | 104 | 97 | 21 | 18 |
@@ -84,18 +84,59 @@ Il est également possible de créer des relations entre les tables grâce aux c
 
 On sépare donc la table précédente en deux :
 
-**comptes**
-| idClient |   idStock   | quantité   | valeurStock |
-|:--:|:-------:|:--------------------:| :-: |
-| 104 | 97 | 21 | 18 |
-| 122 | 97 | 47 | 18 |
-| 104 | 54 | 57 | 6  |  
+**comptes**  
+| idClient |   idStock   | quantité   |
+|:--:|:-------:|:--------------------:|
+| 104 | 97 | 21 |
+| 122 | 97 | 47 |
+| 104 | 54 | 57 | 
 
-**bourse**
+**bourse**  
 | idStock | valeurStock |
 |:-------:|:-----:|
 | 97 | 18 |
 | 54 | 6  |  
+
+On voit bien ici que `idClient` est la clé primaire de la table `comptes` et `idStock` la clé primaire de la table `bourse`.
+Mais `idStock` est une clé secondaire de la table `comptes`
+
+Maintenant on peut "coller" les deux tables pour travailler dessus :
+
+```SQL
+SELECT * FROM
+comptes
+JOIN
+bourse
+ON comptes.idStock = bourse.idStock
+```
+
+Va renvoyer la "table" initiale.
+
+| idClient |   idStock   | quantité   | valeurStock |
+|:--:|:-------:|:--------------------:| :-: |
+| 104 | 97 | 21 | 18 |
+| 122 | 97 | 47 | 18 |
+| 104 | 54 | 57 | 6  | 
+
+
+Et on peut y appliquer tout ce que l'on a vu précédemment :
+
+```SQL
+SELECT idStock, quantité, valeurStock FROM
+compte
+JOIN
+bourse
+ON comptes.idStock = bourse.idStock
+WHERE idClient = 104
+ORDER BY valeurStock ASC
+```
+
+qui donne
+
+| idStock   | quantité   | valeurStock |
+|:--:|:-------:|:--------------------:|
+| 54 | 57 | 6  | 
+| 97 | 21 | 18 |
 
 
 En utilisant SQL, il est possible de gérer efficacement les données d'une entreprise et de les rendre facilement accessibles pour une analyse et une exploitation ultérieure. C'est pourquoi SQL est un outil incontournable pour les professionnels de l'informatique et de la gestion de données.
