@@ -43,6 +43,9 @@ Il est recommandé d'utiliser les bibliothèques suivantes :
 import json
 import requests
 from datetime import datetime
+
+#pip install --upgrade pillow
+from PIL import Image
 ```
 
 Il est très fortement recommandé d'utiliser la Programmation Orientée Objet. Vous pouvez créer et utiliser tous les fichiers de tests et toutes les ressources à disposition.
