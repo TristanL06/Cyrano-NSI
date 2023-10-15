@@ -38,3 +38,18 @@ On travaille maintenant sur le fichier météo.csv disponible sur github. Ce fic
 1) Écrire une fonction qui prend en argument une échéance et qui renvoie la température à cette échéance.
 2) Écrire un code qui calcule la moyenne de toutes les données et qui l'affiche dans le terminal sous forme `nom : moyenne`.
 3) Reprendre le code précédent et engegistrer les résultats dans un fichier CSV.
+
+## Exercice 7 [Bonus] : Travailler avec des fichiers JSON
+
+1) Écrire une fonction qui prend en argument le nom d'un fichier JSON et qui renvoie un dictionnaire contenant les données du fichier.
+2) Écrire une fonction qui prend en argument un dictionnaire et qui enregistre les données dans un fichier JSON.
+3) Avec l'aide de la bibliothèque `requests`, récupérer les données de la page https://ergast.com/api/f1/drivers.json?limit=1000 et les enregistrer dans un fichier JSON.
+```python
+data = requests.get("https://ergast.com/api/f1/drivers.json?limit=1000").json()
+```
+
+data est un dictionnaire contenant les données de la page web. N'hésitez pas à aller voir la page web pour comprendre la structure du dictionnaire.
+
+4) Toujours en travaillant sur ce lien, écrire une fonction qui prend en argument le nom d'un pilote et qui renvoie son année de naissance. Si deux pilotes ont le même nom, renvoyer une liste avec les deux années de naissance.
+
+5) Écrire une fonction qui prend en argument une nationalité et qui renvoie le nombre de pilotes de cette nationalité.
