@@ -63,7 +63,7 @@ Pour lier le fichier CSS à votre fichier HTML, il faut ajouter la balise `<link
 <html>
 <head>
     <title>Mon premier site web</title>
-    <link rel="stylesheet" href="style.css"> /* On ajoute cette ligne */
+    <link rel="stylesheet" href="style.css"> <!-- On ajoute cette ligne here -->
 </head>
 <body>
     <h1>Mon premier site web</h1>
@@ -130,7 +130,7 @@ Pour lier le fichier JavaScript à votre fichier HTML, il faut ajouter la balise
 <head>
     <title>Mon premier site web</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script> /* On ajoute cette ligne */
+    <script src="script.js"></script> <!-- On ajoute cette ligne here -->
 </head>
 <body>
     <h1>Mon premier site web</h1>
