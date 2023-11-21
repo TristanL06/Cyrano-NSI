@@ -163,3 +163,43 @@ function changerTexte() {
 }
 ```
 Ici on voit que le bouton possède un attribut `onclick` qui permet d'appeler une fonction JavaScript quand on clique dessus. Cette fonction permet de changer le texte du paragraphe en utilisant la fonction `getElementById` qui permet de récupérer un élément HTML en fonction de son `id`.
+
+
+## Back
+Tout ce qui a été vu précedemment étaient des fichiers envoyés à l'utilisateur et affichés sur sa machine. Cela permet de juste stocker les fichiers sur le serveur et faire tous les calculs sur la machine du client. Cela a l'avantage de ne pas avoir besoin d'un serveur très puissant, mais cela a l'inconvénient de ne pas pouvoir cacher le code source ou des informations sensibles comme des données personnelles ou des mots de passe.
+Pour faire ça on utilise un serveur qui va faire les calculs et envoyer le résultat à l'utilisateur.
+Dans ce cours nous allons voir comment faire un serveur en Python avec le module Flask. Ce n'est pas le langage le plus utilisé pour ça mais il est très simple à utiliser et permet de faire des choses très rapidement.
+
+### Flask
+Pour utiliser Flask il faut d'abord installer le module avec la commande `pip install flask` (ou `pip3 install flask` si ça ne fonctionne pas).
+Ensuite on peut créer un fichier `app.py` qui va contenir le code du serveur :
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return "Hello world !"
+
+if __name__ == "__main__":
+    app.run(debug=True)
+```
+Ce code permet de créer un serveur qui affiche "Hello world !" quand on va sur la page d'accueil.
+Pour lancer le serveur il faut exécuter le fichier `app.py` avec la commande `python app.py` (ou `python3 app.py` si ça ne fonctionne pas).
+On peut maintenant aller sur la page d'accueil du serveur à l'adresse `http://localhost:5000` et on devrait voir apparaître "Hello world !".
+
+Renvoyer du texte c'est bien, mais on peut faire mieux. On peut par exemple renvoyer du json :
+```python
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+@app.route("/bonjour")
+def index():
+    return jsonify({"message": "Hello world !"})
+
+if __name__ == "__main__":
+    app.run(debug=True)
+```
+`http://localhost:5000/bonjour` renvoie maintenant `{"message": "Hello world !"}`.
