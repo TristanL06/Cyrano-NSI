@@ -8,3 +8,26 @@
 5) Ajouter une image de la recette
 6) Ajouter un lien vers une page web qui contient une autre recette
 7) Modifier le titre de la page web, ainsi que l'icône, qui s'affichent dans l'onglet du navigateur.
+
+# Exercice 2 : Mettre en page la page web créée dans l'exercice 1
+1) Créer un fichier CSS et le lier à la page web.
+2) Modifier la couleur des titres et des textes
+3) Modifier la couleur du fond de la page
+4) Modifier la taille de l'image de la recette
+
+# Exercice 3 : Jouer avec flask
+1) Créer un fichier `app.py` et écrire le code suivant :
+```python
+from flask import Flask, jsonify
+app = Flask(__name__)
+
+@app.route("/ping")
+def ping():
+    return jsonify({"message": "pong!"})
+```
+2) En utilisant les paramètre, créez une route qui calcul la somme de deux nombres.
+3) En utilisant les paramètre, créez une route qui calcul la différence de deux nombres.
+4) En utilisant les paramètre, créez une route qui calcul le produit de deux nombres.
+5) En utilisant les paramètre, créez une route qui calcul le quotient de deux nombres.
+
+# Projet : Créer un site web de contenu vidéo
