@@ -171,7 +171,7 @@ Pour faire ça on utilise un serveur qui va faire les calculs et envoyer le rés
 Dans ce cours nous allons voir comment faire un serveur en Python avec le module Flask. Ce n'est pas le langage le plus utilisé pour ça mais il est très simple à utiliser et permet de faire des choses très rapidement.
 
 ### Flask
-Pour utiliser Flask il faut d'abord installer le module avec la commande `pip install flask` (ou `pip3 install flask` si ça ne fonctionne pas).
+Pour utiliser Flask il faut d'abord installer le module avec la commande `pip install Flask` (ou `pip3 install flask` si ça ne fonctionne pas).
 Ensuite on peut créer un fichier `app.py` qui va contenir le code du serveur :
 ```python
 from flask import Flask
@@ -203,3 +203,56 @@ if __name__ == "__main__":
     app.run(debug=True)
 ```
 `http://localhost:5000/bonjour` renvoie maintenant `{"message": "Hello world !"}`.
+
+Dans le lien on peut ajouter des paramètres :
+```python
+from flask import Flask, jsonify, request
+
+app = Flask(__name__)
+
+@app.route("/bonjour")
+def index():
+    nom = request.args.get("nom")
+    return jsonify({"message": f"Bonjour {nom} !"})
+
+if __name__ == "__main__":
+    app.run(debug=True)
+```
+`http://localhost:5000/bonjour?nom=Marlon` renvoie maintenant `{"message": "Bonjour Marlon !"}`.
+
+
+### Utilisation avancée
+
+On peut utiliser Flask pour faire des sites web plus complexes. Par exemple, on peut faire un site web qui affiche une recette de cuisine :
+```python
+from flask import Flask, jsonify, request, render_template
+
+app = Flask(__name__)
+app.template_folder = "templates"
+
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+@app.route("/recette/:name")
+def recette(name):
+    return render_template(f"{name}.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)
+```
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mon premier site web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mon premier site web</h1>
+    <p>Je suis un paragraphe</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Smiley_head_happy.svg/1200px-Smiley_head_happy.svg.png" alt="Smiley">
+</body>
+</html>
+```
