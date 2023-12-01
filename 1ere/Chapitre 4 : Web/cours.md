@@ -256,3 +256,130 @@ if __name__ == "__main__":
 </body>
 </html>
 ```
+
+
+# Théorie du web
+
+## Adresses
+
+Le web est une vaste toile sur laquelle chaque machine est reliée à d'autres machines. Pour pouvoir communiquer entre elles, les machines ont besoin d'une adresse. C'est comme une adresse postale, mais pour les machines. On appelle cela l'adresse IP (Internet Protocol). C'est une suite de chiffres qui permet d'identifier une machine sur le réseau.
+
+Comme ce n'est pas intuitif de taper `140.82.121.3` pour aller sur github on utilise des noms de domaine. C'est une sorte de raccourci pour les adresses IP. Par exemple, `github.com` est un nom de domaine. Quand on le tape dans la barre d'adresse de notre navigateur, le navigateur va chercher l'adresse IP correspondante et va se connecter à cette adresse.
+
+On peut le tester avec la commande `ping github.com` dans l'invite de commande. On devrait voir apparaître l'adresse IP correspondante.  
+Le meilleur moyen reste d'utiliser la commande `nslookup github.com` qui permet de voir l'adresse IP et le nom de domaine correspondant. Une fois que l'on a cette adresse IP on peut essayer de regarder par où passe notre requête avec la commande `traceroute github.com`. On voit alors que le premier serveur est notre box, puis la requête passe par plusieurs serveurs avant d'arriver sur le serveur de github.
+
+
+## Protocoles
+
+Pour communiquer entre elles, les machines ont besoin de se mettre d'accord sur un protocole. C'est un ensemble de règles qui permettent de communiquer. Par exemple, pour envoyer un mail, on utilise le protocole SMTP (Simple Mail Transfer Protocol). Pour envoyer des fichiers, on utilise le protocole FTP (File Transfer Protocol). Pour afficher des pages web, on utilise le protocole HTTP (HyperText Transfer Protocol).
+
+Depuis quelques années, on utilise de plus en plus le protocole HTTPS (HyperText Transfer Protocol Secure) qui est une version sécurisée du protocole HTTP. Il permet de chiffrer les données qui transitent sur le réseau pour éviter qu'elles soient lues par des personnes malveillantes.  
+Cela assure 3 choses :
+- Confidentialité : les données ne peuvent pas être lues par des personnes malveillantes
+- Intégrité : les données ne peuvent pas être modifiées par des personnes malveillantes
+- Authentification : on est sûr que les données proviennent bien de la bonne personne
+
+## Codes de statut
+
+Quand on fait une requête à un serveur, celui-ci nous renvoie un code de statut. C'est un code qui permet de savoir si la requête a fonctionné ou non. Il existe de nombreux codes de status différents. Le chiffre des centaines permet de savoir à quelle catégorie appartient le code :
+- 1xx : Information
+- 2xx : Succès
+- 3xx : Redirection
+- 4xx : Erreur client
+- 5xx : Erreur serveur
+
+Les codes les plus courants sont :
+- 200 : OK (la requête a fonctionné, code le plus courant)
+- 301 : Moved Permanently (la ressource demandée a été déplacée)
+- 400 : Bad Request (la requête est mal formée)
+- 403 : Forbidden (accès interdit)
+- 404 : Not Found (la ressource demandée n'existe pas, le fameux 404)
+- 500 : Internal Server Error (erreur interne du serveur, non gérée par le développeur)
+
+Pour facilement voir les requêtes on peut utiliser la commande `curl` qui permet de faire des requêtes HTTP en ligne de commande. Par exemple, `curl -I https://www.github.com` permet de faire une requête HTTP à google. On voit alors que la requête a fonctionné et on voit le code HTML de la page d'accueil de google.
+
+
+Pour illustrer les codes d'erreur vous pouvez aller sur le site [http.dog](https://http.dog/) qui permet de voir les codes d'erreur avec des images de chiens.
+
+## Cookies
+
+Les cookies sont des petits fichiers qui sont stockés sur la machine de l'utilisateur. Ils permettent de stocker des informations sur l'utilisateur. Par exemple, quand on se connecte à un site web, le site va stocker un cookie sur notre machine pour savoir qu'on est connecté. Cela permet de ne pas avoir à se reconnecter à chaque fois qu'on va sur le site.  
+Ils sont également utilisés pour faire de la publicité ciblée. Par exemple, si on va sur un site de chaussures, on va voir des publicités pour des chaussures sur d'autres sites. C'est parce que le site de chaussures a stocké un cookie sur notre machine pour savoir qu'on est intéressé par les chaussures.  
+Les cookies peuvent également être utilisés pour faire des statistiques, conserver des préférences, etc...
+
+## Organisation d'un lien
+
+Un lien est composé de plusieurs parties :
+- le protocole : `https://`
+- le nom de domaine : `www.github.com`
+- le chemin : `/TristanL06/Cyrano-NSI`
+- les paramètres : `?tab=repositories`
+- l'ancre : `#readme`
+
+### Le protocole
+
+Le protocole permet de savoir comment communiquer avec le serveur. Il existe de nombreux protocoles différents, mais les plus courants sont :
+- HTTP(S) : HyperText Transfer Protocol (Secure)
+- FTP : File Transfer Protocol
+- SMTP : Simple Mail Transfer Protocol (pour les mails)
+- SSH : Secure Shell (pour se connecter à un serveur à distance)
+
+Ils sont comme les langues, il faut que les deux machines soient d'accord sur le protocole à utiliser pour pouvoir communiquer.
+
+### Le nom de domaine
+
+Le nom de domaine permet de savoir à quelle machine on veut se connecter. Il est composé de plusieurs parties :
+- le sous-domaine : `www`
+- le domaine : `github`
+- l'extension : `com`
+
+Le sous-domaine permet de savoir à quelle partie du site on veut se connecter. Par exemple, `www` permet de se connecter à la partie publique du site, `api` permet de se connecter à l'API du site, `admin` permet de se connecter à la partie administration du site, etc...  
+Le domaine permet de savoir à quelle entreprise appartient le site. Par exemple, `github` appartient à l'entreprise github.  
+L'extension permet de savoir à quel type de site on veut se connecter. Par exemple, `com` est l'extension pour les sites commerciaux, `fr` est l'extension pour les sites français, `org` est l'extension pour les sites d'organisations, etc...
+
+Tout cela est basé sur du "déclaratif", n'importe qui peut acheter presque n'importe quel nom de domaine, mais c'est en général plutôt réspecté par les entreprises.
+
+### Le chemin
+
+Le chemin permet de savoir quelle ressource on veut récupérer. Par exemple, `/TristanL06/Cyrano-NSI` permet de récupérer le projet Cyrano-NSI de l'utilisateur TristanL06 sur github.  
+Sur une machine les fichiers sont organisés en arborescence. C'est à dire qu'il y a un dossier racine, qui contient des dossiers, qui contiennent des dossiers, etc...  
+Sur un serveur web, c'est la même chose. Il y a un dossier racine qui contient des dossiers, qui contiennent des dossiers, donc pour l'arborescence suivante :
+```txt
+www
+├── TristanL06
+|   ├── Cyrano-SNT
+│   |   ├── index.html
+│   |   ├── style.css
+│   |   └── script.js
+│   └── Cyrano-NSI
+│       ├── index.html
+│       ├── style.css
+│       └── script.js
+```
+On peut accéder aux fichiers `index.html` avec les liens suivants :
+- `https://www.github.com/TristanL06/Cyrano-SNT/index.html`
+- `https://www.github.com/TristanL06/Cyrano-NSI/index.html`
+
+selon la ressource que l'on veut récupérer.  
+En réalité certains serveurs web actuels ont un fonctionnement plus complexe, mais ça reste la norme pour la plupart des serveurs web.
+
+### Les paramètres
+
+Les paramètres permettent de passer des informations au serveur. Par exemple, `?tab=repositories` permet de dire au serveur qu'on veut afficher la page des dépôts d'un utilisateur sur github.
+
+### L'ancre
+
+L'ancre permet de se déplacer sur une page web. Par exemple, `#readme` permet de se déplacer sur la partie readme d'un projet sur github. Cela permet de faire des liens vers une partie précise d'une page web.  
+Elle peut être ajouté dans le code HTML de n'importe quelle page web avec la propriété `id`. Par exemple, `<h1 id="readme">Readme</h1>` permet de créer un titre avec l'ancre `#readme`.
+```html
+<h1 id="readme">Readme</h1>
+```
+
+*équivalence des commandes windows/linux :*
+| Windows | Linux |
+| ------- | ----- |
+| ping | ping |
+| nslookup | nslookup |
+| tracert | traceroute |
+| curl | curl |
