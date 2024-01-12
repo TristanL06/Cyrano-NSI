@@ -90,7 +90,7 @@ def fibonacci(n):
     return fibonacci(n - 1) + fibonacci(n - 2)
 ```
 On peut voir que la fonction `fibonacci(n)` est définie par récurrence. On a donc une complexité $O(2^n)$. Les appels récursifs du fibo(4) sont représentés par un arbre de récursion :
-![Alt text](arbre_binaire.png)
+![Alt text](https://igm.univ-mlv.fr/~dr/XPOSE2012/La%20programmation%20dynamique/resources/fibo_tree.png)
 
 Et là on remarque immédiatement que l'on fait beaucoup de calculs en double, en triple voire pire. On peut donc optimiser la fonction `fibonacci(n)` en utilisant un dictionnaire pour stocker les résultats déjà calculés :
 ```python
@@ -160,6 +160,44 @@ def recherche_dichotomique(L, x):
 
 Il y a plein de manières d'optimiser la recherche dichotomique dans une liste, notamment en utilisant des indices plutôt que des tranches de liste, ce qui a une complexité caché assez importante.
 
+
+### Visualiser les appels récursifs
+
+*ce n'est ni au programme ni exigible, juste pour vous rendre compte de la complexité cachée des fonctions récursive et de l'importance d'y réfléchir*
+```python
+current_tab = 0
+
+def print_recursive(function):
+    def wrapper(*args, **kwargs):
+        global current_tab
+        try:
+            print(" " * current_tab + f"APPEL {function.__name__}{args}")
+            current_tab += 1
+            result = function(*args, **kwargs)
+            current_tab -= 1
+            print(" " * current_tab + f"RETOUR {result}")
+            return result
+        except Exception as e:
+            print(f"Error in {function.__name__}: {e}")
+            return None
+    return wrapper
+
+
+@print_recursive
+def recursive(a):
+    if a == 0:
+        return 0
+    return 1 + recursive(a-1)
+
+@print_recursive
+def fibo(n):
+    if n <= 1:
+        return max(0, n)
+    return fibo(n-1) + fibo(n-2)
+
+print("résultat =", recursive(12))
+#print("résultat fibo =", fibo(12))
+```
 
 # Important pour le BAC
 
