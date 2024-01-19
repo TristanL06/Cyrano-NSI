@@ -30,8 +30,8 @@ On s'intéresse maintenant à l'aire de la figure
 Une banque souhaite mettre en place un système informatique basé sur la POO pour gérer les comptes de ses clients.
 
 1. Créer une classe `Compte` modélisant un compte en banque. La classe possède trois attributs `idClient` `somme` et `taux` correspondant au numéro du client possédant le compte, à la somme placée sur le compte et au taux d'intérêt. Ces trois attributs doivent être affectés par le constructeur.
-2. Ajoutez une méthode `affiche()` qui affiche la somme et le taux comme ci-dessous :
-   `Compte 17884	|	somme : 1000€	|	taux : 2%`
+2. Ajoutez une méthode `affiche()` qui affiche la somme et le taux comme ci-dessous :  
+   `Compte 17884	|	somme : 1000€	|	taux : 2%`  
    *La tabulation peut être écrite `\t` dans un print*
 3. Ajouter la méthode `depot(x)` qui ajoute `x` à la somme sur le compte
 4. Ajoutez la méthode `retrait(x)` qui enlève `x` à la somme sur le compte. Elle pourra renvoyer un erreur si la somme sur le compte devient négative et annuler alors l'opération.
