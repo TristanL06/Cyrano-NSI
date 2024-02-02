@@ -1,4 +1,4 @@
-# Chapitre 5 : Les langages WEB
+# Chapitre 4 : Les langages WEB
 
 # Exercice 1 : Créer une page avec une recette de cuisine
 1) Écrire le code HTML pour créer la structure d'une page web comme montré dans le cours.
