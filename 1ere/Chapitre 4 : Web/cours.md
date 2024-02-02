@@ -1,4 +1,4 @@
-# Chapitre 5 : Les langages WEB
+# Chapitre 4 : Les langages WEB
 
 *pour ce cours il est conseillé d'utiliser un éditeur de texte comme [Visual Studio Code](https://code.visualstudio.com/)(recommandé) ou [Sublime Text](https://www.sublimetext.com/)*
 *Il est également possible d'utiliser une version en ligne comme [VSC online](https://vscode.dev/) ou [codepen](https://codepen.io/)*
