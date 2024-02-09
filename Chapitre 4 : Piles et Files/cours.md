@@ -52,7 +52,7 @@ Voici successivement un dépilement, puis un empilement de la valeur 8
 Pour travailler sur les piles en Python on se limitera aux fonctions :
 | opération | Fonction en Python |
 | - | - |
-| regarder si la pile est vide | `not not Pile` |
+| regarder si la pile est vide | `not Pile` |
 | regarder le sommet de la pile | `Pile[-1]` |
 | Enlever l'élément au sommet | `Pile.pop()` |
 | Ajouter un élément à la pile | `Pile.append(element)` |
