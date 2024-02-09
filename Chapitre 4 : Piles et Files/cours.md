@@ -72,7 +72,7 @@ Pour les files, les opérations autorisées sont quasiment les mêmes que pour l
 Pour travailler sur les files en Python on se limitera aux fonctions :
 | opération | Fonction en Python |
 | - | - |
-| regarder si la file est vide | `not not File |
+| regarder si la file est vide | `not File` |
 | regarder début de la file | `File[0]` |
 | Enlever le premier élément | `File.pop(0)` |
 | Ajouter un élément à la file | `File.append(element)` |
