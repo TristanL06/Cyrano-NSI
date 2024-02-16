@@ -140,3 +140,24 @@ qui donne
 
 
 En utilisant SQL, il est possible de gérer efficacement les données d'une entreprise et de les rendre facilement accessibles pour une analyse et une exploitation ultérieure. C'est pourquoi SQL est un outil incontournable pour les professionnels de l'informatique et de la gestion de données.
+
+## Modifier une table
+l'action la plus simple est de supprimer une table, pour cela on utilise la commande `DROP TABLE`  
+```SQL
+DROP TABLE comptes
+```
+Cependant ce n'est pas celle qu'on va le plus utiliser.
+
+La plus courante est celle qui consiste à modifier une valeur, pour cela on utilise la commande `UPDATE`
+```SQL
+UPDATE comptes
+SET quantité = 100
+WHERE idClient = 104
+```
+Cela va modifier la quantité de tous les stocks du client 104 à 100.
+
+Pour ajouter une ligne on utilise la commande `INSERT INTO`
+```SQL
+INSERT INTO comptes (idClient, idStock, quantité)
+VALUES (104, 97, 21)
+```
