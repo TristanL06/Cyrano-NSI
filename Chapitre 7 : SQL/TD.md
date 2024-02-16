@@ -1,6 +1,34 @@
 Pour les exercices on pourra utiliser le site [https://applibot-api.onrender.com/cyrano/sql/](https://applibot-api.onrender.com/cyrano/sql/) pour utiliser les commandes.
 
 # Exercice 1
+Voici les deux tables disponibles par défaut dans le système de gestion fourni :
+**users**
+| id |   name   | age   |
+|:--:|:-------:|:--------------------:|
+| 1 | Alice | 25 |
+| 2 | Bob | 22 |
+| 3 | Charlie | 28 |
+| 4 | David | 32 |
+| 5 | Eve | 21 |
+
+**products**
+| id |   name   | price   |
+|:--:|:-------:|:--------------------:|
+| 1 | Laptop | 1000 |
+| 2 | Mouse | 20 |
+| 3 | Keyboard | 50 |
+| 4 | Monitor | 300 |
+| 5 | Printer | 150 |
+
+1. Écrire une requête SQL pour obtenir le nom et l'âge de tous les utilisateurs.
+2. Écrire une requête SQL pour obtenir le nom et le prix de tous les produits.
+3. Écrire une requête SQL pour obtenir le nom et l'âge de tous les utilisateurs de plus de 25 ans.
+4. Écrire une requête SQL pour obtenir le nom et l'âge de tous les utilisateurs de plus de 25 ans.
+5. Afficher le nom et le prix de tous les produits triés par prix croissant.
+6. Écrire une requête SQL pour obtenir le nom et le prix de tous les produits dont le prix est supérieur à 100.
+7. Combien de produits coûtent plus de 100 ? Écrire une requête SQL pour obtenir le nombre de produits dont le prix est supérieur à 100. (on utilisera la fonction COUNT)
+
+# Exercice 2
 dans cet exercice on va mener de bout en bout la création d'une base de données, son exploitation et sa modification.  
 On travaillera sur la base de données suivante :
 
@@ -39,7 +67,8 @@ On travaillera sur la base de données suivante :
 ```SQL
 SELECT titre, année FROM morceaux
 ORDER BY année
-```  
+```
+
     - Quel est le résultat de cette requête ?
     - À quoi sert ORDER BY ?
 4. Écrire une requête permettant d'afficher les titres des morceaux par ordre alphabétique.
