@@ -14,7 +14,7 @@ Il existe deux types de complexité :
 - **La complexité en espace** : la mémoire nécessaire à l'exécution de l'algorithme
 
 Nous allons ici uniquement nous intéresser à la complexité en temps.  
-Pour aprofonfir le sujet, vous pouvez consulter le livre de [Sylvain Perifel
+Pour approfondir le sujet, vous pouvez consulter le livre de [Sylvain Perifel
  **COMPLEXITÉ ALGORITHMIQUE**](https://www.irif.fr/~sperifel/complexite.pdf).
 
 ## 2. Complexité en temps
