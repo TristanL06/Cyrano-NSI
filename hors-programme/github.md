@@ -66,3 +66,22 @@ La branche dev est la branche de développement, c'est celle sur laquelle on tra
 ## Travail sur une branche
 
 Sauf exception le créateur d'une branche est le seul à travailler dessus. Si plusieurs personnes travaillent sur la même branche il y a un risque de conflit. Une branche ne doit servir qu'à une unique feature, une fois la feature terminée on la fusionne dans la branche principale.
+
+## convention de nommage
+
+Pour faciliter la gestion des branches il est conseillé de suivre une convention de nommage. Par exemple, on peut nommer les branches de la manière suivante :
+- feature/nom : pour une nouvelle fonctionnalité
+- bugfix/nom : pour une correction de bug
+- hotfix/nom : pour une correction de bug critique
+- chore/nom : pour une tâche de maintenance
+
+Les commits doivent aussi être clairs et précis. Il est conseillé de les nommer de la manière suivante, en ajoutant une courte description de la modification :
+- feat: ajout d'une nouvelle fonctionnalité
+- fix: correction d'un bug
+- docs: modification de la documentation
+- style: modification de l'aspect visuel
+- refactor: refactoring du code
+
+## Conclusion
+
+Github est un outil très puissant pour travailler en équipe sur un projet. Il permet de gérer les versions de fichiers, de travailler sur plusieurs branches, de partager son code avec la communauté, etc. Il est important de savoir l'utiliser pour travailler en équipe, et il est conseillé de suivre une convention pour que tout le monde s'y retrouve.
