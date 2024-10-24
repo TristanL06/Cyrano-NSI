@@ -21,6 +21,8 @@ Ce repo a pour objectif de centraliser et mettre à disposition les cours et TD 
 - [Chapitre 6 : Architecture et commandes UNIX](https://github.com/TristanL06/Cyrano-NSI/blob/main/1ere/Chapitre%206/)
   - [Cours](https://github.com/TristanL06/Cyrano-NSI/blob/main/1ere/Chapitre%206/cours.md)
   - [TD](https://github.com/TristanL06/Cyrano-NSI/blob/main/1ere/Chapitre%206/td.md)
+- [Chapitre 7 : Conversions entre bases (décimal, binaire et hexadécimal)](https://github.com/TristanL06/Cyrano-NSI/blob/main/1ere/Chapitre%207/)
+  - [Cours](https://github.com/TristanL06/Cyrano-NSI/blob/main/1ere/Chapitre%207/cours.md)
 
 
 ## Terminale
