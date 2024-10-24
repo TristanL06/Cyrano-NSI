@@ -10,8 +10,8 @@ En informatique, les données transitent et sont stockées sous forme de bits, d
 Dans ce cours, nous allons apprendre à convertir des nombres d'une base à l'autre, entre binaire, décimal et hexadécimal.
 
 > Pour représenter un nombre dans une base on utilise la notation suivante :  
-$(x)_n$ où $x$ est le nombre à convertir et $n$ est la base dans laquelle on veut le convertir.  
-Par exemple, $(1011)_2$ est le nombre 1011 en base 2, et $(11)_{10}$ est le nombre 11 en base 10.
+$(x)\_n$ où $x$ est le nombre à convertir et $n$ est la base dans laquelle on veut le convertir.  
+Par exemple, $(1011)\_2$ est le nombre 1011 en base 2, et $(11)\_{10}$ est le nombre 11 en base 10.
 
 ## 1. Conversion entre le binaire et le décimal
 
@@ -22,10 +22,10 @@ On a donc décidé que pas de courant = 0 et courant = 1. Pour représenter 2 il
 On peut donc dire que le binaire est une base 2, car il n'y a que 2 chiffres possibles : 0 et 1.
 
 En base 10, la formule mathématique pour représenter les nombres est la suivante :  
-$(4537)_{10} = 4 * 10^3 + 5 * 10^2 + 3 * 10^1 + 7 * 10^0$
+$(4537)\_{10} = 4 * 10^3 + 5 * 10^2 + 3 * 10^1 + 7 * 10^0$
 
 En binaire, la formule est la même, mais avec des puissances de 2 :  
-$(1011)_2 = 1 * 2^3 + 0 * 2^2 + 1 * 2^1 + 1 * 2^0$
+$(1011)\_2 = 1 * 2^3 + 0 * 2^2 + 1 * 2^1 + 1 * 2^0$
 
 on multiplie chaque chiffre par la base élevée à la puissance correspondante, et on additionne le tout.  
 
@@ -33,18 +33,18 @@ on multiplie chaque chiffre par la base élevée à la puissance correspondante,
 
 Pour convertir un nombre décimal en binaire, on divise le nombre par 2 et on note le reste. On recommence avec le quotient obtenu, jusqu'à obtenir un quotient nul. En lisant les restes de bas en haut, on obtient le nombre en binaire.
 
-Exemple : Convertir $(13)_{10}$ en binaire
+Exemple : Convertir $(13)\_{10}$ en binaire
 ```
 13 / 2 = 6 reste 1
 6 / 2 = 3 reste 0
 3 / 2 = 1 reste 1
 1 / 2 = 0 reste 1
 ```
-Donc $(13)_{10} = (1101)_2$
+Donc $(13)\_{10} = (1101)\_2$
 
 Cette méthode étant un peu lente, on peut utiliser une méthode plus rapide en utilisant des puissances de 2. On note les puissances de 2 (1, 2, 4, 8, 16...) de droite à gauche jusqu'à dépasser le nombre à convertir. On prend ensuite les puissances qui sont inférieures ou égales au nombre à convertir, et on les additionne pour obtenir le nombre en binaire.
 
-Exemple : Convertir $(13)_{10}$ en binaire
+Exemple : Convertir $(13)\_{10}$ en binaire
 
 1. on note les puissances de 2 de droite à gauche jusqu'à dépasser 13 :  
 ```
@@ -81,23 +81,23 @@ Exemple : Convertir $(13)_{10}$ en binaire
  0  1  1  0  1
 ```
 
-Donc $(13)_{10} = (1101)_2$
+Donc $(13)\_{10} = (1101)\_2$
 
 
 ### Conversion d'un nombre binaire en décimal
 
 Pour convertir un nombre binaire en décimal, on utilise la formule mathématique vue précédemment. On multiplie chaque chiffre par la puissance de 2 correspondante, et on additionne le tout.
 
-Exemple : Convertir $(1101)_2$ en décimal
+Exemple : Convertir $(1101)\_2$ en décimal
 ```
 1 * 2^3 + 1 * 2^2 + 0 * 2^1 + 1 * 2^0 = 8 + 4 + 0 + 1 = 13
 ```
-Donc $(1101)_2 = (13)_{10}$
+Donc $(1101)\_2 = (13)\_{10}$
 
 
 Ce calcul étant assez long à écrire et assez compliqué à faire sans calculatrice, on peut utiliser une méthode plus rapide. On note les puissances de 2 de droite à gauche, comme à l'étape précédente et on écris le nombre binaire en dessous. On multiplie chaque chiffre par la puissance de 2 correspondante, et on additionne le tout.
 
-Exemple : Convertir $(1101)_2$ en décimal
+Exemple : Convertir $(1101)\_2$ en décimal
 ```
 8  4  2  1
 1  1  0  1
@@ -107,7 +107,7 @@ Je ne garde que les chiffre qui on un 1 en dessous, et je les additionne :
 ```
 8 + 4 + 1 = 13
 ```
-Donc $(1101)_2 = (13)_{10}$
+Donc $(1101)\_2 = (13)\_{10}$
 
 
 ## 2. Conversion entre le binaire et l'hexadécimal
@@ -139,7 +139,7 @@ L'hexadécimal est une base 16, donc il y a 16 chiffres possibles : 0 à F, d'ap
 
 Pour convertir un nombre binaire en hexadécimal, on découpe le nombre binaire en groupe de 4 bits en partant de la droite, et on les convertit en hexadécimal. Si le groupe le plus à gauche n'a pas 4 bits, on complète avec des 0 à gauche.
 
-Exemple : Convertir $(101101101)_2$ en hexadécimal
+Exemple : Convertir $(101101101)\_2$ en hexadécimal
 
 On découpe en groupe de 4 bits en complétant à gauche :
 ```
@@ -158,13 +158,13 @@ On convertit chaque décimal en hexadécimal d'après la table de conversion :
 2     D    A
 ```
 
-Donc $(101101101)_2 = (2DA)_{16}$
+Donc $(101101101)\_2 = (2DA)\_{16}$
 
 ### Conversion d'un nombre hexadécimal en binaire
 
 Pour convertir un nombre hexadécimal en binaire, on fait exactement l'inverse de la conversion précédente. On convertit chaque chiffre hexadécimal en binaire, et on les regroupe.
 
-Exemple : Convertir $(2DA)_{16}$ en binaire
+Exemple : Convertir $(2DA)\_{16}$ en binaire
 
 On convertit chaque chiffre en décimal d'après la table de conversion :
 ```
@@ -178,9 +178,9 @@ On convertit chaque décimal en binaire :
 0010 1101 1010
 ```
 
-Donc $(2DA)_{16} = (001011011010)_2$
+Donc $(2DA)\_{16} = (001011011010)\_2$
 
-> Comme en maths, quand un nombre commence par des 0, on peut les supprimer, donc $(001011011010)_2 = (1011011010)_2$
+> Comme en maths, quand un nombre commence par des 0, on peut les supprimer, donc $(001011011010)\_2 = (1011011010)\_2$
 
 
 ## 3. Conversion entre le décimal et l'hexadécimal
@@ -189,35 +189,35 @@ Donc $(2DA)_{16} = (001011011010)_2$
 
 Pour convertir un nombre décimal en hexadécimal, on convertit le nombre décimal en binaire, puis le binaire en hexadécimal.
 
-Exemple : Convertir $(49)_{10}$ en hexadécimal
+Exemple : Convertir $(49)\_{10}$ en hexadécimal
 
-1. On convertit $(49)_{10}$ en binaire :  
+1. On convertit $(49)\_{10}$ en binaire :  
 ```
 64  32  16  8  4  2  1
  0   1   1  0  0  0  1
 ```
 
-2. On convertit $(110001)_2$ en hexadécimal :  
+2. On convertit $(110001)\_2$ en hexadécimal :  
 ```
 11  0001
 3    1
 ```
 
-Donc $(49)_{10} = (31)_{16}$
+Donc $(49)\_{10} = (31)\_{16}$
 
 ### Conversion d'un nombre hexadécimal en décimal
 
 Pour convertir un nombre hexadécimal en décimal, on convertit le nombre hexadécimal en binaire, puis le binaire en décimal.
 
-Exemple : Convertir $(7A)_{16}$ en décimal
+Exemple : Convertir $(7A)\_{16}$ en décimal
 
-1. On convertit $(7A)_{16}$ en binaire :  
+1. On convertit $(7A)\_{16}$ en binaire :  
 ```
  7    A
 0111 1010
 ```
 
-2. On convertit $(01111010)_2$ en décimal :  
+2. On convertit $(01111010)\_2$ en décimal :  
 ```
 64  32  16  8  4  2  1
  1   1   1  1  0  1  0
@@ -227,4 +227,4 @@ Exemple : Convertir $(7A)_{16}$ en décimal
 64 + 32 + 16 + 8 + 2 = 122
 ```
 
-Donc $(7A)\_{16} = (122)_{10}$
+Donc $(7A)\_{16} = (122)\_{10}$
