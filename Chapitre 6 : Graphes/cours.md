@@ -81,6 +81,10 @@ Soit M la matrice non pondérée associée à un graphe, la matrice M<sup>x</sup
 
 Il y a plusieurs algorithmes couramment utilisés pour travailler avec les graphes, notamment :
 
+## Parcours de graphe
+
+Dans ce cours nous n'abordons que le parcours par l'algorithme de Dijkstra, qui n'est pas le plus rapide. Pour compléter le cours et votre culture générale vous pouvez regarder la vidéo suivante [parcours de graphes youtube](https://www.youtube.com/watch?v=aW9kZcJx64o).
+
 ### L'algorithme de Dijkstra :
 L’algorithme de Dijkstra permettant de déterminer le plus court chemin entre deux points dans un graphe.
 
